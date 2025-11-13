@@ -1,6 +1,6 @@
 # Introduction
 
-This is a *learning project*—designed for anyone curious about how complex, real-world systems are built, broken down, and iterated on. I’ll be documenting the entire journey openly: from early speculation and flawed assumptions, through debugging dead ends, to (hopefully) a working prototype.
+This is a *learning project*—designed for anyone curious about how complex systems are built, broken down, and iterated on. I’ll be documenting the entire journey openly: from early speculation and flawed assumptions, through debugging dead ends, to (hopefully) a working prototype.
 
 The development is structured in branches. Each branch corresponds to a major milestone (like architecture design, account automation, or chat integration), so you can follow the evolution step by step, without getting lost in the noise of commits.
 
@@ -8,10 +8,10 @@ We begin with:
 👉 [Branch 1 – System Design and Functionality](https://github.com/inoutlake/system_design_and_functionality)
 — where I map out goals, confront unknowns, and sketch the first architecture.
 
-⏱️ *Timeline?* Roughly three weeks. (Cue laughter.) As every developer knows: plans are hypotheses, not promises. What matters is the *process*: the decisions, the trade-offs, the “oh *that’s* why it failed” moments.
+I expect reader to have basic software development experience — APIs, HTTP, Git, and at least one programming language.
 
-📘 **Assumed background**: I expect you to have basic software development experience — comfort with APIs, HTTP, Git, and at least one programming language. I won’t explain what a WebSocket is or how OAuth *generally* works.
+I plan to finish this project in three weeks, but as you know: every plan is only a hypothesis.
 
-🔍 **Important note**: This project is **strictly for educational purposes**. It explores automation techniques that *violate Kick’s Terms of Service* and could disrupt platform integrity if misused. I do **not** endorse deploying such systems in the wild—or targeting real creators. Think of this as a *controlled lab experiment*: the goal is understanding, not deployment.
+**Important note**: This project is **strictly for educational purposes**. It explores automation techniques that *violate Kick’s Terms of Service* and could disrupt platform integrity if misused. I do **not** endorse deploying such systems in the wild or targeting real creators. Think of this as a *controlled lab experiment*: the goal is understanding, not deployment.
 
 Enjoy the process! 🛠️

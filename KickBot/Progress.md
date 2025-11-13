@@ -41,12 +41,13 @@ That context could include:
 For now, I’m *excluding* stream imagery due to processing overhead—it’s unlikely to yield much ROI on my modest hardware.
 Thankfully, there are plenty of lightweight LLM options. I’ll run one locally via an **Ollama Docker container**, and can scale to a cloud-hosted model later if needed.
 Real-time speech-to-text is also feasible—many modern STT solutions handle streaming input well.
-My main concern is resource usage: will my laptop (especially with a game running in the background) handle concurrent STT, LLM inference, and browser automation? It might get expensive—CPU/GPU-wise.
+My main concern is resource usage: will user's hardware (especially with a game running in the background) handle concurrent STT, LLM inference, and browser automation? It might get expensive CPU/GPU-wise.
 The baseline interaction loop I’m considering:
 1. Set a delay (e.g., 40 seconds),  
 2. *During* the delay: generate a context-aware message,  
 3. When the timer ends: send the message (or wait for generation if it’s not ready).  
 Because generation happens *during* the delay, the resulting message lags ~40 seconds behind real-time context. Trade-off accepted—for now.
+
 ---
 ## System Design  
 

@@ -8,34 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "398f432f950e21b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Progress.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Progress"
-            }
-          },
-          {
             "id": "4895866f1c6df088",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Features.canvas",
+                "file": "System design_0.canvas",
                 "viewState": {
-                  "x": 555,
-                  "y": -77.5,
-                  "zoom": -0.9877017335812321
+                  "x": -252,
+                  "y": -390,
+                  "zoom": -1.6019856485634703
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "Features"
+              "title": "System design_0"
             }
           }
         ]
@@ -181,7 +167,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,11 +182,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "398f432f950e21b7",
+  "active": "4895866f1c6df088",
   "lastOpenFiles": [
     "Features.canvas",
-    "Progress.md",
+    "files/SystemDesign_0.png",
+    "files/features.png",
+    "files/Features.png",
     "System design_0.canvas",
+    "Progress.md~",
+    "files",
+    "Progress.md",
     "Kasada.md",
     "Functionality and system design.md",
     "Research tasks.md",

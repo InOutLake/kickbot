@@ -1,0 +1,41 @@
+{
+	"nodes":[
+		{"id":"fd0ecf9f9499b4a6","type":"text","text":"Interaction","x":35,"y":-117,"width":250,"height":60},
+		{"id":"593d70ef53988317","type":"text","text":"Watch stream","x":380,"y":-340,"width":250,"height":60},
+		{"id":"74f76219249ed764","type":"text","text":"Polls","x":380,"y":-237,"width":250,"height":60},
+		{"id":"f2c972feaa17c2bf","x":380,"y":-117,"width":250,"height":60,"type":"text","text":"Chat"},
+		{"id":"d4bcb073c48a5db6","type":"text","text":"Simple websocket connection with ping requests","x":700,"y":-358,"width":250,"height":96},
+		{"id":"7b3c75ed92a5bfe2","type":"text","text":"Viewer","x":-255,"y":-117,"width":250,"height":60},
+		{"id":"2eb49037eb5fcb12","x":-560,"y":-117,"width":250,"height":60,"type":"text","text":"Stream"},
+		{"id":"bd6c62f6d4aa9dbe","x":-255,"y":3,"width":250,"height":60,"type":"text","text":"Authenticate"},
+		{"id":"8631a22bec52226c","x":-380,"y":143,"width":250,"height":60,"type":"text","text":"Login"},
+		{"id":"74868c8b962914f2","type":"text","text":"Create account","x":-90,"y":143,"width":250,"height":60},
+		{"id":"8c1f1def3e23727a","x":700,"y":-237,"width":250,"height":60,"type":"text","text":"API call, webhook"},
+		{"id":"29e8a65f685ca76a","type":"text","text":"Generate messages from context","x":700,"y":-117,"width":250,"height":60},
+		{"id":"a94cfdb9d321218c","type":"text","text":"Context","x":1040,"y":-177,"width":250,"height":60},
+		{"id":"5a857a3fd00a14e2","type":"text","text":"Lightweight model , 4b max","x":1040,"y":-57,"width":250,"height":55},
+		{"id":"34ef2c20ef138b13","type":"text","text":"Viewer description and rules","x":1420,"y":-177,"width":250,"height":60},
+		{"id":"fca2f01831691697","type":"text","text":"Chat","x":1420,"y":-77,"width":250,"height":60},
+		{"id":"2f3eb738f221329b","type":"text","text":"Speaker's STT","x":1420,"y":13,"width":250,"height":60},
+		{"id":"a6fe3007c13ccdae","type":"text","text":"Stream images (maybe)","x":1420,"y":103,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"51b621a021912055","fromNode":"29e8a65f685ca76a","fromSide":"right","toNode":"5a857a3fd00a14e2","toSide":"left"},
+		{"id":"b190b848c74f9fd6","fromNode":"29e8a65f685ca76a","fromSide":"right","toNode":"a94cfdb9d321218c","toSide":"left"},
+		{"id":"d11a79966ec18caa","fromNode":"a94cfdb9d321218c","fromSide":"right","toNode":"fca2f01831691697","toSide":"left"},
+		{"id":"f60600299768d3e8","fromNode":"a94cfdb9d321218c","fromSide":"right","toNode":"2f3eb738f221329b","toSide":"left"},
+		{"id":"bdac420d37570c1a","fromNode":"a94cfdb9d321218c","fromSide":"right","toNode":"a6fe3007c13ccdae","toSide":"left"},
+		{"id":"b4ed713f54d82015","fromNode":"a94cfdb9d321218c","fromSide":"right","toNode":"34ef2c20ef138b13","toSide":"left"},
+		{"id":"290f771d924cb592","fromNode":"fd0ecf9f9499b4a6","fromSide":"right","toNode":"74f76219249ed764","toSide":"left"},
+		{"id":"42f0773b216472a0","fromNode":"fd0ecf9f9499b4a6","fromSide":"right","toNode":"593d70ef53988317","toSide":"left"},
+		{"id":"ba9c397d84f0806c","fromNode":"fd0ecf9f9499b4a6","fromSide":"right","toNode":"f2c972feaa17c2bf","toSide":"left"},
+		{"id":"982fdba784ec324d","fromNode":"f2c972feaa17c2bf","fromSide":"right","toNode":"29e8a65f685ca76a","toSide":"left"},
+		{"id":"7c477a129f3dce2b","fromNode":"593d70ef53988317","fromSide":"right","toNode":"d4bcb073c48a5db6","toSide":"left"},
+		{"id":"c6ace14a29fd013b","fromNode":"7b3c75ed92a5bfe2","fromSide":"right","toNode":"fd0ecf9f9499b4a6","toSide":"left"},
+		{"id":"d13bb9dd590e0a0f","fromNode":"2eb49037eb5fcb12","fromSide":"right","toNode":"7b3c75ed92a5bfe2","toSide":"left"},
+		{"id":"c6eb0ffab402c97c","fromNode":"7b3c75ed92a5bfe2","fromSide":"bottom","toNode":"bd6c62f6d4aa9dbe","toSide":"top"},
+		{"id":"cf6f57cfd6e15f25","fromNode":"bd6c62f6d4aa9dbe","fromSide":"bottom","toNode":"74868c8b962914f2","toSide":"top"},
+		{"id":"50169acb3937bb92","fromNode":"bd6c62f6d4aa9dbe","fromSide":"bottom","toNode":"8631a22bec52226c","toSide":"top"},
+		{"id":"d1e0f17218486e5b","fromNode":"74f76219249ed764","fromSide":"right","toNode":"8c1f1def3e23727a","toSide":"left"}
+	]
+}

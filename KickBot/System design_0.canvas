@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"92e6934ad08d93fd","type":"group","x":-1064,"y":-1320,"width":1624,"height":1240,"label":"App container"},
+		{"id":"313b7d671ba330c0","type":"group","x":-1000,"y":80,"width":569,"height":460,"label":"Login container"},
+		{"id":"95161cf895dfab44","type":"text","text":"# AccountsManager\n- get_viewers(n)\n- create_accounts(n)\n- load_accounts(n)","x":-720,"y":-750,"width":259,"height":196},
+		{"id":"b9eed9830633cc83","type":"text","text":"# ViewersManager\n- get_viewers(n)\n- set_user_settings(UserSettings)\n- run_viewers(streamer_id)\n- stop_viewers(viewers)\n- print_stats()","x":-360,"y":-877,"width":335,"height":225},
+		{"id":"653610495d25d028","type":"text","text":"# Viewer\nloop_start()\nloop_stop()\nset_settings(settings)\nsend_message()\nanswer_poll()\n","x":-347,"y":-570,"width":309,"height":207},
+		{"id":"2996d48ae14d3321","type":"text","text":"# ContextGenerator\ngenerate_context()","x":150,"y":-488,"width":320,"height":125},
+		{"id":"9475f2451fe4c695","type":"text","text":"# MessageGenerator\ngenerate_message(context)","x":150,"y":-321,"width":320,"height":116},
+		{"id":"e4805cd650db2738","type":"text","text":"# SmtpService\nread_code(email)","x":-1044,"y":-785,"width":250,"height":106},
+		{"id":"c6f31e95db2cd66c","type":"text","text":"# DataManager\nsave(Credentials)\nload(Credentials)","x":-1044,"y":-630,"width":250,"height":120},
+		{"id":"1827b5b0ce701f44","type":"text","text":"# Stream\nstart()\nset_target_viewers(n)\nset_target_chatters(n)\nset_target_polls_interctions(n)\nget_stats(n)\nstop()","x":-325,"y":-1140,"width":266,"height":220},
+		{"id":"ffe88cb4e7ad1b57","type":"text","text":"# StreamsManager\nget_all_stats()\nget_stats(stream_id)\nstart_stream(settings)\nstop_stream(stream)","x":-794,"y":-1120,"width":375,"height":180},
+		{"id":"3b3caf84afea8509","type":"text","text":"# PlatformAPI\nget_chat_history()\nwatch()\nsend_message()\n\n","x":185,"y":-732,"width":250,"height":180},
+		{"id":"3fc6754fc3345536","type":"text","text":"# TextGenerator","x":185,"y":45,"width":250,"height":60},
+		{"id":"6f1de44231db5868","type":"text","text":"# LoginEmulator\ncreate_account()\nlogin_viewer(viewer_id)","x":-980,"y":100,"width":250,"height":140},
+		{"id":"d10dfedb045cc9ed","type":"text","text":"# IpObfuscator\nget(url, request)\npost(url, request)","x":-980,"y":360,"width":250,"height":139},
+		{"id":"bd900ade6c86bffd","type":"text","text":"I don't really know how sessions are handled there\n\nI'm not sure but this also may need to be containerized for further IP obfuscation.","x":-701,"y":170,"width":250,"height":203},
+		{"id":"4cf8482f1dc7f275","type":"text","text":"# Settings","x":150,"y":-1090,"width":250,"height":60},
+		{"id":"544fab89f3708a00","x":185,"y":-909,"width":250,"height":65,"type":"text","text":"# IPObfuscator"}
+	],
+	"edges":[
+		{"id":"455f57169f819157","fromNode":"b9eed9830633cc83","fromSide":"left","toNode":"95161cf895dfab44","toSide":"right"},
+		{"id":"310a816b46051e3e","fromNode":"95161cf895dfab44","fromSide":"bottom","toNode":"6f1de44231db5868","toSide":"top"},
+		{"id":"cbca2b463c7a58e5","fromNode":"6f1de44231db5868","fromSide":"bottom","toNode":"d10dfedb045cc9ed","toSide":"top"},
+		{"id":"dbd79c1d4aa1e3a5","fromNode":"653610495d25d028","fromSide":"right","toNode":"9475f2451fe4c695","toSide":"left"},
+		{"id":"26c8d9ff37ef25f4","fromNode":"653610495d25d028","fromSide":"right","toNode":"3b3caf84afea8509","toSide":"left"},
+		{"id":"d01cdea34baa35a7","fromNode":"653610495d25d028","fromSide":"right","toNode":"2996d48ae14d3321","toSide":"left"},
+		{"id":"690a97e60c485188","fromNode":"2996d48ae14d3321","fromSide":"top","toNode":"3b3caf84afea8509","toSide":"bottom"},
+		{"id":"b2c953531beadeed","fromNode":"9475f2451fe4c695","fromSide":"bottom","toNode":"3fc6754fc3345536","toSide":"top","label":"Requests Queue"},
+		{"id":"7d4c782f60a01b23","fromNode":"95161cf895dfab44","fromSide":"left","toNode":"e4805cd650db2738","toSide":"right"},
+		{"id":"38bee3de4a35a719","fromNode":"95161cf895dfab44","fromSide":"left","toNode":"c6f31e95db2cd66c","toSide":"right"},
+		{"id":"9a2d638bb3849a39","fromNode":"b9eed9830633cc83","fromSide":"bottom","toNode":"653610495d25d028","toSide":"top"},
+		{"id":"caca88c20895e5f1","fromNode":"1827b5b0ce701f44","fromSide":"bottom","toNode":"b9eed9830633cc83","toSide":"top"},
+		{"id":"92a09c2594b637bc","fromNode":"1827b5b0ce701f44","fromSide":"right","toNode":"3b3caf84afea8509","toSide":"left"},
+		{"id":"11a6d1188da6b8d1","fromNode":"ffe88cb4e7ad1b57","fromSide":"right","toNode":"1827b5b0ce701f44","toSide":"left"},
+		{"id":"4b50d29e597c0b1d","fromNode":"95161cf895dfab44","fromSide":"bottom","toNode":"653610495d25d028","toSide":"left"},
+		{"id":"fc20769d8db32af0","fromNode":"544fab89f3708a00","fromSide":"bottom","toNode":"3b3caf84afea8509","toSide":"top"}
+	]
+}

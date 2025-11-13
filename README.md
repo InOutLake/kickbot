@@ -4,9 +4,11 @@ This is a *learning project*—designed for anyone curious about how complex sys
 
 The development is structured in branches. Each branch corresponds to a major milestone (like architecture design, account automation, or chat integration), so you can follow the evolution step by step, without getting lost in the noise of commits.
 
+Project (future branches) also have an obsidian folder with all the notes I do during development, feel free to explore it as well.
+
 We begin with:
-👉 [Branch 1 – System Design and Functionality](https://github.com/inoutlake/system_design_and_functionality)
-— where I map out goals, confront unknowns, and sketch the first architecture.
+👉 [Branch 1 – System Design and Functionality](https://github.com/inoutlake/1-system_design_and_functionality)
+— where I map out goals, research unknowns, and sketch the first architecture.
 
 I expect reader to have basic software development experience — APIs, HTTP, Git, and at least one programming language.
 

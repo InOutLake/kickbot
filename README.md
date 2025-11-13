@@ -12,6 +12,7 @@ After clarifying these goals, I started diving deeper into research.
 ### Kick Defense Mechanism  
 Since messaging on Kick is only allowed for authorized users, I’ll also need:  
 - Bot registration and authorization.  
+
 This is where things get tricky. At first, I was surprised there’s no reCAPTCHA on the platform—but later I learned Kick uses the **Kasada** bot defense system. I found a helpful [paper](https://ru.scribd.com/document/899949744/Understanding-Kasada-Bot-Defense-and-Bypass-Mechanisms) on how it works.
 I also discovered some tools addressing the account-generation problem, such as [this Kick.com account generator](https://github.com/fqw3/Kick.com-account-generator) and various [Kick bot projects](https://github.com/topics/kick-bot).  
 Clearly, there *are* tools capable of bypassing Kasada—but most working implementations are locked behind paid APIs.

@@ -1,3 +1,5 @@
+## Short summary
+In initial part of the project I defined the core functionality: managing viewbots that watch streams, participate in polls, and send context-aware chat messages. I also researched Kick.com defense mechanisms (Kasada) and ways I can bypass it. I also sketched out first architecture of the project. 
 ## Features  
 The first thing I’m going to do is map out the core features I want my app to have. They are:  
 - Managing viewbots on stream (count and actions);  

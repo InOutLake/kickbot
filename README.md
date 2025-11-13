@@ -20,7 +20,7 @@ Fine. We’ll try it our own way.
 My approach: automate a **headed browser**. This lets me bypass defenses that rely on WebGL fingerprinting, and any proof-of-work algorithms will execute naturally at runtime. It also reduces the need for heavy TLS tweaking (at least, I *think* it does). I might eventually add mouse-movement simulation—but that’s a detail for later.
 To further obfuscate connections, I plan to route traffic through the **Tor network**. If allowed, this makes it nearly impossible for the server to trace the real client IP—reducing ban risk close to zero. It might also help with request rate–limiting, though I’m not yet sure whether Kick enforces that.
 Another requirement for account creation: an **SMTP server** to fetch email verification codes, which bots can then use during signup.
-Once logged in, I shouldn’t need to emulate anything beyond authentication: Kick’s API only requires a valid access token for most actions. Since they use a custom token format, I’m unsure about its lifespan—but I’ll store tokens securely and reuse them as needed.
+It seems that I shouldn’t need to emulate anything beyond authentication: Kick’s API only requires a valid access token for most actions. Since they use a custom token format, I’m unsure about its lifespan—but I’ll store tokens securely and reuse them as needed.
 ### Watching Stream  
 From browser DevTools, it seems viewer counts are incremented based on how many clients periodically send `ping` messages over the stream’s WebSocket connection.
 The high-level viewing algorithm will be:

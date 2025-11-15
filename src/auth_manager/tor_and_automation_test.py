@@ -1,11 +1,17 @@
 import asyncio
 from datetime import datetime, timedelta
 from camoufox.async_api import AsyncCamoufox
+from patchright.async_api import ProxySettings, async_playwright
 from random_username.generate import generate_username
 
 import random
 
 TOR_SOCKS_PROXY = {"server": "socks5://127.0.0.1:9150"}  # current Tor connection
+CHROMIUM_ARGS = [
+    "--no-first-run",
+    "--disable-blink-features=AutomationControlled",
+    "--force-webrtc-ip-handling-policy",
+]
 email = "lozhkovilkin@gmail.com"
 start_birthdate = datetime.fromisocalendar(1995, 1, 1)
 end_birthdate = datetime.fromisocalendar(2005, 1, 1)
@@ -23,10 +29,21 @@ def random_password() -> str:
 
 
 async def main():
-    async with AsyncCamoufox(
-        geoip=True, proxy=TOR_SOCKS_PROXY, humanize=True, locale="ru-RU"
-    ) as browser:
-        page = await browser.new_page()
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(
+            headless=False,
+            slow_mo=200,
+            args=CHROMIUM_ARGS,
+            ignore_default_args=["--enable-automation"],
+        )
+        context = await browser.new_context(
+            proxy={"server": TOR_SOCKS_PROXY["server"]},
+            ignore_https_errors=True,
+            permissions=["geolocation"],
+            locale="ru-RU",
+        )
+
+        page = await context.new_page()
         await page.goto("https://kick.com", timeout=1200000)
         login_button = page.get_by_test_id("login").first
         await login_button.click()

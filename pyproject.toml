@@ -1,0 +1,19 @@
+[project]
+name = "kickbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.13.2",
+    "camoufox[geoip]>=0.4.11",
+    "humancursor>=1.1.5",
+    "playwright>=1.56.0",
+    "playwright-stealth>=2.0.0",
+    "pysocks>=1.7.1",
+    "random-username>=1.0.2",
+]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

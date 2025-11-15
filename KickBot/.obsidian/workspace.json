@@ -11,17 +11,14 @@
             "id": "4895866f1c6df088",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "System design_0.canvas",
-                "viewState": {
-                  "x": -252,
-                  "y": -390,
-                  "zoom": -1.6019856485634703
-                }
+                "file": "Kasada.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "System design_0"
+              "icon": "lucide-file",
+              "title": "Kasada"
             }
           }
         ]
@@ -184,12 +181,12 @@
   },
   "active": "4895866f1c6df088",
   "lastOpenFiles": [
+    "System design_0.canvas",
     "Progress.md~",
     "Features.canvas",
     "files/SystemDesign_0.png",
     "files/features.png",
     "files/Features.png",
-    "System design_0.canvas",
     "files",
     "Progress.md",
     "Kasada.md",

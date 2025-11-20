@@ -78,3 +78,10 @@ From this state I'm considering further research and prototypes development on f
   I need to try and send few requests over tor network to see if this method works, and come up with other otherwise.
 - Browser automation
   I need to explore browser automation and ways to simulate human behavior. It may include way more complex engineering than I assume.
+
+## Kasada research
+I've done some [Kasada.md|research] on Kasada defence mechanism. I created authorization script with patchright and was surprised I was not stopped at any point. I suppose actions will take place once I automate it in bigger scale. To further investigate restrictions that will be put on me I'll try to scale this process to at leats dozen of accounts.
+
+I deployed my own SMTP server to receive and read emails. Don't repeat my mistakes and try to deploy it on residential IP, it turns out port 25 is usually blocked by ISP by default :'D. So much I hoped I wouldn't have to do any dev-ops things, after some painful shenanigans with DNS, configs, and port forwarding I managed to deploy it on my proxy (small virtual machine I rent for 5$ a month). You can find configuration in docker-compose.mail.yaml file. Don't forget to put ssl sertificates (self signed will do) into the config folder. I also wrote a simple api app on golang to create accounts for new users (I prefer python, but I have tight RAM restrictions on my proxy).
+
+

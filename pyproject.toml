@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "kickbot"
 version = "0.1.0"
@@ -6,15 +10,21 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "aiohttp>=3.13.2",
+    "aioimaplib>=2.0.1",
     "camoufox[geoip]>=0.4.11",
+    "dotenv>=0.9.9",
     "humancursor>=1.1.5",
-    "patchright>=1.56.0",
-    "playwright>=1.56.0",
+    "patchright[chrome]>=1.56.0",
     "playwright-stealth>=2.0.0",
+    "pydantic>=2.12.4",
+    "pydantic-settings>=2.12.0",
     "pysocks>=1.7.1",
     "random-username>=1.0.2",
 ]
 
+[tool.setuptools.packages.find]
+where = ["src"]
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+extraPaths = ["src"]

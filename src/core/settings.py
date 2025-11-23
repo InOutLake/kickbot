@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     DOMAIN: str
     EMAIL_API_PORT: int
     SOCKS_CONNECTION_STRING: str = "socks5://127.0.0.1:9050"
+    EMAIL_API_KEY: str
 
     @property
     def TOR_SOCKS_PROXY(self) -> dict:

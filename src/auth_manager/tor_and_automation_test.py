@@ -4,6 +4,7 @@ import asyncio
 from auth_manager.mail import MailConnection, create_email_accounts
 from datetime import datetime, timedelta
 from patchright.async_api import Response, async_playwright
+
 from random_username.generate import generate_username
 from core.settings import SETTINGS
 import random
@@ -45,11 +46,9 @@ async def register_user():
         browser = await p.chromium.launch(
             headless=False,
             slow_mo=200,
-            args=CHROMIUM_ARGS,
-            ignore_default_args=["--enable-automation"],
         )
         context = await browser.new_context(
-            proxy={"server": SETTINGS.TOR_SOCKS_PROXY["server"]},
+            # proxy={"server": SETTINGS.TOR_SOCKS_PROXY["server"]},
             ignore_https_errors=True,
             permissions=["geolocation"],
             locale="en-US",
@@ -57,6 +56,9 @@ async def register_user():
 
         page = await context.new_page()
         await page.goto("https://kick.com", timeout=1200000)
+        await page.wait_for_timeout(6000000)
+        login_button = page.get_by_test_id("login").first
+        await login_button.click()
         login_button = page.get_by_test_id("login").first
         await login_button.click()
 
@@ -93,8 +95,7 @@ async def register_user():
         await page.locator('input[name="birthdate"]').type(birthdate)
         await page.locator('input[name="password"]').type(password)
         registration_button = page.get_by_test_id("sign-up-submit")
-        logging.info(f"EMAIL: {email}\n\n\n")
-        logging.debug(f"EMAIL: {email}\n\n\n")
+        logging.debug(f"EMAIL: {email}")
         await registration_button.click()
 
         code = ""
@@ -113,9 +114,16 @@ async def register_user():
 
         await page.locator('input[name="code"]').type(code)
         await page.wait_for_timeout(6000000)
+        to_scroll = page.locator("div[class=markdown-policy-page]")
 
-        await context.close()
-        await browser.close()
+        button = page.locator("button[name=I accept]")  # or content
+        button = page.get_by_text("I accept")
+
+        # scroll untill active
+        # press the button
+
+        # await context.close()
+        # await browser.close()
 
 
 async def check_tor_proxy():

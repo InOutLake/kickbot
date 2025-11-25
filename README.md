@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 This is a *learning project*—designed for anyone curious about how complex systems are built, broken down, and iterated on. I’ll be documenting the entire journey openly: from early speculation and flawed assumptions, through debugging dead ends, to (hopefully) a working prototype.
 
@@ -7,7 +7,7 @@ The development is structured in branches. Each branch corresponds to a major mi
 Project (future branches) also have an obsidian folder with all the notes I do during development, feel free to explore it as well.
 
 We begin with:
-👉 [Branch 1 – System Design and Functionality](https://github.com/inoutlake/1-system_design_and_functionality)
+👉 [Branch 1 – System Design and Functionality](https://github.com/InOutLake/kickbot/tree/1-functionality-and-system-design)
 — where I map out goals, research unknowns, and sketch the first architecture.
 
 I expect reader to have basic software development experience — APIs, HTTP, Git, and at least one programming language.

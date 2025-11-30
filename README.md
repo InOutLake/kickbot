@@ -6,9 +6,9 @@ My domain was banned after deploying an email automation API (a humbling reminde
 While I didn’t fully reverse-engineer or bypass Kasada’s protections (a task demanding deeper expertise—or time I’m choosing to invest elsewhere), the existence of third-party solvers confirms it’s feasible, just not yet efficient for this project’s scope.
 
 For now, I’m pivoting pragmatically:
-✅ Using a small pool of manually registered accounts for stability,
-✅ Optionally integrating a paid registration proxy service and email accounts for scalability—without burning domains or IPs.
+- Using a small pool of manually registered accounts for stability,
+- Optionally integrating a paid registration proxy service and email accounts for scalability—without burning domains or IPs.
 
 ## Next steps
-This isn’t surrender—it’s prioritization. With defense research paused (for now), I’m shifting focus to building the core system.
+With defense research paused (for now), I’m shifting focus to building the core system.
 
